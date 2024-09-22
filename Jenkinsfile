@@ -42,7 +42,7 @@ pipeline {
         }
         stage('Fix Dependencies Vulnerabilities') {
             steps {
-                sh "npm ausdit fix --force"
+                sh "npm audit fix --force"
             }
         }
         stage('Install Dependencies') {
