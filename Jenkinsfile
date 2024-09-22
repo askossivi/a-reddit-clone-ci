@@ -40,6 +40,16 @@ pipeline {
                 }
             }
         }
+        stage('Update Core-js') {
+            steps {
+                sh "npm install core-js@latest"
+            }
+        }
+        stage('Update Core-js-pure') {
+            steps {
+                sh "npm install core-js-pure@latest"
+            }
+        }
         stage('Fix Dependencies Vulnerabilities') {
             steps {
                 sh "npm audit fix --force"
