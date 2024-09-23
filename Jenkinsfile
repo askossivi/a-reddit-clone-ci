@@ -52,7 +52,7 @@ pipeline {
         }
         stage('TRIVY FS SCAN') {
             steps {
-                sh "trivy fs . > 2-trivyfs.txt"
+                sh "trivy fs ."
              }
          }
         stage("Build & Push Docker Image") {
