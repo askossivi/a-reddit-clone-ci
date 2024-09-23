@@ -42,7 +42,7 @@ pipeline {
         }
         stage('NPM Update') {
             steps {
-                sh "npm update"
+                sh "npm update --legacy-peer-deps"
             }
         }
         stage('Install Dependencies') {
