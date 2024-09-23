@@ -40,7 +40,11 @@ pipeline {
                 }
             }
         }
-
+        stage('NPM Update') {
+            steps {
+                sh "npm update"
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 sh "npm install"
